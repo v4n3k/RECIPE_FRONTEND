@@ -1,0 +1,112 @@
+@import '../../styles/variables.scss';
+
+.page {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	max-width: 900px;
+	width: 100%;
+
+	h2 {
+		font-size: 48px;
+		margin-bottom: 30px;
+
+		@media (max-width: 520px) {
+			& {
+				font-size: 42px;
+			}
+		}
+
+		@media (max-width: 395px) {
+			& {
+				font-size: 36px;
+			}
+		}
+	}
+
+	.createRecipeAndTabsContainer {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 900px;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	.createRecipeButton {
+		padding: 14px 22px;
+		font-size: 30px;
+		font-weight: 700;
+		border-radius: 14px;
+		border: none;
+		background-color: $brightOrange;
+		color: $white;
+		margin-left: 20px;
+		cursor: pointer;
+		transition: 0.3s;
+
+		&:hover {
+			opacity: 0.7;
+		}
+
+		@media (max-width: 490px) {
+			& {
+				font-size: 28px;
+			}
+		}
+
+		@media (max-width: 395px) {
+			& {
+				font-size: 26px;
+				width: 100% !important;
+			}
+		}
+	}
+
+	@media (max-width: 940px) {
+		& {
+			padding: 0 20px;
+		}
+
+		.createRecipeAndTabsContainer {
+			flex-direction: column-reverse;
+			gap: 10px;
+
+			.createRecipeButton {
+				display: flex;
+				flex-direction: row;
+				margin-left: 0;
+				white-space: nowrap;
+
+				.new {
+					display: inline-block;
+					margin: 0 6px;
+
+					@media (max-width: 490px) {
+						& {
+							display: none;
+						}
+					}
+				}
+
+				@media (max-width: 490px) {
+					& {
+						justify-content: center;
+						width: 355px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.needForAuthText {
+	font-size: 36px;
+
+	@media (max-width: 490px) {
+		& {
+			font-size: 30px !important;
+		}
+	}
+}
